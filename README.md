@@ -1,5 +1,4 @@
 🏥 Maruthi Eye & Dental Hospital Website
-
 A modern, responsive healthcare website concept created for **Maruthi Eye & Dental Hospital, Gangavathi, Karnataka**.
 
 The project focuses on creating a professional digital presence for a healthcare business with clear service information, contact options, and an online appointment-booking experience.
