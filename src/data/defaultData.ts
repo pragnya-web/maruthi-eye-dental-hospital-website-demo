@@ -1,0 +1,404 @@
+import { HospitalDatabase } from '../types/index.ts';
+
+// Default initial password hash for "Admin@Maruthi2026" using SHA-256
+export const DEFAULT_ADMIN_PASSWORD_HASH = '01b88ad7d9bfaefcf16851d4a6bd0cb3b63e868a3c6adbcb1aac3635fa632bd7';
+
+export const initialHospitalDatabase: HospitalDatabase = {
+  settings: {
+    name: 'Maruthi Eye & Dental Hospital',
+    alternateNames: [
+      'Maruti Eye & Dental Hospital',
+      'Maruthi Super Speciality Eye and Dental Hospital',
+    ],
+    tagline: 'Expert Eye & Dental Care, Under One Roof.',
+    description:
+      'Providing comprehensive eye and dental care in Gangavathi with modern diagnostic and treatment facilities.',
+    address: {
+      street: 'OSB Road, 2nd Cross',
+      area: 'Vidya Nagar',
+      city: 'Gangavathi',
+      state: 'Karnataka',
+      pincode: '583227',
+      country: 'India',
+    },
+    phone: '+91 85332 34655',
+    email: 'contact@maruthieyedental.com',
+    whatsappNumber: '+91 85332 34655',
+    googleMapsUrl: 'https://maps.google.com/?q=Maruthi+Eye+%26+Dental+Hospital+OSB+Road+Vidya+Nagar+Gangavathi+Karnataka+583227',
+    googleMapsEmbedQuery: 'Maruthi Eye & Dental Hospital, OSB Road, Vidya Nagar, Gangavathi, Karnataka 583227',
+    slotDurationMinutes: 30,
+    aboutText:
+      'Maruthi Eye & Dental Hospital is a healthcare facility in Gangavathi providing eye and dental care with a focus on accessible, professional patient care and modern diagnostic facilities.',
+    features: [
+      'Eye Care',
+      'Dental Care',
+      'Diagnostic Services',
+      'Surgical Care',
+      'Patient-focused consultations',
+    ],
+    medicalDisclaimer:
+      'Information provided on this website is for general informational purposes and does not replace professional medical consultation. Please consult a qualified healthcare professional for diagnosis and treatment.',
+    emergencyNotice:
+      'For urgent medical situations, please contact the hospital directly or seek appropriate emergency medical care.',
+  },
+
+  businessHours: [
+    {
+      day: 'Monday',
+      isOpen: true,
+      morningStart: '09:30',
+      morningEnd: '13:30',
+      eveningStart: '16:30',
+      eveningEnd: '20:30',
+    },
+    {
+      day: 'Tuesday',
+      isOpen: true,
+      morningStart: '09:30',
+      morningEnd: '13:30',
+      eveningStart: '16:30',
+      eveningEnd: '20:30',
+    },
+    {
+      day: 'Wednesday',
+      isOpen: true,
+      morningStart: '09:30',
+      morningEnd: '13:30',
+      eveningStart: '16:30',
+      eveningEnd: '20:30',
+    },
+    {
+      day: 'Thursday',
+      isOpen: true,
+      morningStart: '09:30',
+      morningEnd: '13:30',
+      eveningStart: '16:30',
+      eveningEnd: '20:30',
+    },
+    {
+      day: 'Friday',
+      isOpen: true,
+      morningStart: '09:30',
+      morningEnd: '13:30',
+      eveningStart: '16:30',
+      eveningEnd: '20:30',
+    },
+    {
+      day: 'Saturday',
+      isOpen: true,
+      morningStart: '09:30',
+      morningEnd: '13:30',
+      eveningStart: '16:30',
+      eveningEnd: '20:30',
+    },
+    {
+      day: 'Sunday',
+      isOpen: false,
+      morningStart: '09:30',
+      morningEnd: '13:30',
+      eveningStart: '16:30',
+      eveningEnd: '20:30',
+      note: 'Contact hospital to confirm availability.',
+    },
+  ],
+
+  holidays: [
+    {
+      id: 'h1',
+      date: '2026-10-02',
+      name: 'Gandhi Jayanti',
+      isRecurring: true,
+    },
+    {
+      id: 'h2',
+      date: '2026-11-01',
+      name: 'Kannada Rajyotsava',
+      isRecurring: true,
+    },
+  ],
+
+  services: [
+    {
+      id: 'eye-1',
+      department: 'eye',
+      name: 'Cataract Care',
+      shortDescription:
+        'Evaluation and treatment pathways for patients with cataract-related vision concerns.',
+      iconName: 'Eye',
+      durationMinutes: 30,
+      isAvailable: true,
+      displayOrder: 1,
+    },
+    {
+      id: 'eye-2',
+      department: 'eye',
+      name: 'Phacoemulsification',
+      shortDescription:
+        'Modern cataract surgery technique using phacoemulsification.',
+      iconName: 'Activity',
+      durationMinutes: 30,
+      isAvailable: true,
+      displayOrder: 2,
+    },
+    {
+      id: 'eye-3',
+      department: 'eye',
+      name: 'Foldable IOL',
+      shortDescription:
+        'Treatment options involving foldable intraocular lens implantation, where clinically appropriate.',
+      iconName: 'Layers',
+      durationMinutes: 30,
+      isAvailable: true,
+      displayOrder: 3,
+    },
+    {
+      id: 'eye-4',
+      department: 'eye',
+      name: 'Retina Care',
+      shortDescription:
+        'Diagnostic and treatment services related to retinal conditions.',
+      iconName: 'Focus',
+      durationMinutes: 30,
+      isAvailable: true,
+      displayOrder: 4,
+    },
+    {
+      id: 'eye-5',
+      department: 'eye',
+      name: 'Glaucoma Care',
+      shortDescription:
+        'Evaluation and management of glaucoma-related eye conditions.',
+      iconName: 'ShieldAlert',
+      durationMinutes: 30,
+      isAvailable: true,
+      displayOrder: 5,
+    },
+    {
+      id: 'eye-6',
+      department: 'eye',
+      name: 'OCT Scan',
+      shortDescription:
+        'Optical Coherence Tomography for detailed retinal and eye assessment.',
+      iconName: 'ScanLine',
+      durationMinutes: 30,
+      isAvailable: true,
+      displayOrder: 6,
+    },
+    {
+      id: 'eye-7',
+      department: 'eye',
+      name: 'Humphrey Visual Field Analysis',
+      shortDescription:
+        'Visual field testing used as part of appropriate eye examinations.',
+      iconName: 'PieChart',
+      durationMinutes: 30,
+      isAvailable: true,
+      displayOrder: 7,
+    },
+    {
+      id: 'eye-8',
+      department: 'eye',
+      name: 'Green Laser',
+      shortDescription:
+        'Laser-based ophthalmic treatment available where clinically appropriate.',
+      iconName: 'Zap',
+      durationMinutes: 30,
+      isAvailable: true,
+      displayOrder: 8,
+    },
+    {
+      id: 'eye-9',
+      department: 'eye',
+      name: 'YAG Laser',
+      shortDescription: 'Ophthalmic YAG laser services.',
+      iconName: 'Crosshair',
+      durationMinutes: 30,
+      isAvailable: true,
+      displayOrder: 9,
+    },
+    {
+      id: 'dental-1',
+      department: 'dental',
+      name: 'Comprehensive Dental Care',
+      shortDescription:
+        'Consultation and dental care services are available at the hospital. Contact the hospital or book an appointment to discuss your dental concern.',
+      iconName: 'Smile',
+      durationMinutes: 30,
+      isAvailable: true,
+      displayOrder: 1,
+    },
+  ],
+
+  // Per prompt: DO NOT invent doctors. Only display doctors after administrator adds verified info.
+  doctors: [],
+
+  facilities: [
+    {
+      id: 'fac-1',
+      title: 'Eye Diagnostics',
+      category: 'Diagnostic',
+      description:
+        'Equipped with advanced diagnostic devices including OCT Scan and Humphrey Visual Field Analyzer for high-precision ophthalmic assessment.',
+      imageUrl: 'https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=800&q=80',
+      features: ['Optical Coherence Tomography (OCT)', 'Humphrey Field Analyzer', 'Digital Slit Lamp Examination'],
+      displayOrder: 1,
+    },
+    {
+      id: 'fac-2',
+      title: 'Ophthalmic Laser Services',
+      category: 'Laser Suite',
+      description:
+        'Specialized green laser and YAG laser delivery systems for targeted anterior and posterior segment clinical applications.',
+      imageUrl: 'https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=800&q=80',
+      features: ['Green Laser Treatment', 'YAG Laser Capsulotomy & Iridotomy', 'Precision Optics'],
+      displayOrder: 2,
+    },
+    {
+      id: 'fac-3',
+      title: 'Surgical Facilities',
+      category: 'Operation Theatre',
+      description:
+        'Clean surgical environment designed for phacoemulsification, foldable intraocular lens implantation, and micro-incision ophthalmic procedures.',
+      imageUrl: 'https://images.unsplash.com/photo-1551076805-e1869033e561?auto=format&fit=crop&w=800&q=80',
+      features: ['Phacoemulsification System', 'Sterile Air Handling', 'High-Magnification Surgical Microscope'],
+      displayOrder: 3,
+    },
+    {
+      id: 'fac-4',
+      title: 'Dental Care Operatory',
+      category: 'Dental Clinic',
+      description:
+        'Modern, hygienic dental consultation and treatment operatory dedicated to oral examinations and clinical dental care.',
+      imageUrl: 'https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=800&q=80',
+      features: ['Ergonomic Patient Dental Chair', 'Aseptic Sterilization Setup', 'Digital Intraoral Diagnostic View'],
+      displayOrder: 4,
+    },
+    {
+      id: 'fac-5',
+      title: 'Patient Waiting Area',
+      category: 'Hospital Interior',
+      description:
+        'Spacious, organized reception and seating lounge with patient helpdesk, clear signage, and queue guidance.',
+      imageUrl: 'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=800&q=80',
+      features: ['Organized Appointment Helpdesk', 'Comfortable Seating', 'Direct Wheelchair Access'],
+      displayOrder: 5,
+    },
+    {
+      id: 'fac-6',
+      title: 'Accessible Facilities',
+      category: 'Accessibility',
+      description:
+        'Step-free patient corridors, wide doorways, and accessibility considerations for elderly and vision-assisted visitors.',
+      imageUrl: 'https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?auto=format&fit=crop&w=800&q=80',
+      features: ['Ramp & Step-Free Entrance', 'Elderly-Friendly Assistance', 'Central Vidya Nagar Location'],
+      displayOrder: 6,
+    },
+  ],
+
+  gallery: [
+    {
+      id: 'gal-1',
+      title: 'Hospital Reception & Consultation Desk',
+      category: 'Reception',
+      imageUrl: 'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=1000&q=80',
+      altText: 'Maruthi Eye & Dental Hospital reception and patient registration desk',
+      displayOrder: 1,
+    },
+    {
+      id: 'gal-2',
+      title: 'Ophthalmic Examination & Slit Lamp Station',
+      category: 'Eye Care',
+      imageUrl: 'https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=1000&q=80',
+      altText: 'Modern ophthalmic examination equipment at Maruthi Eye Hospital Gangavathi',
+      displayOrder: 2,
+    },
+    {
+      id: 'gal-3',
+      title: 'Clinical Dental Treatment Operatory',
+      category: 'Dental Care',
+      imageUrl: 'https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1000&q=80',
+      altText: 'Dental care chair and treatment setup at Maruthi Hospital',
+      displayOrder: 3,
+    },
+    {
+      id: 'gal-4',
+      title: 'Laser Treatment & Diagnostics Room',
+      category: 'Facilities',
+      imageUrl: 'https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=1000&q=80',
+      altText: 'Specialized eye laser and diagnostic room',
+      displayOrder: 4,
+    },
+    {
+      id: 'gal-5',
+      title: 'Ophthalmic Operation Theatre Suite',
+      category: 'Facilities',
+      imageUrl: 'https://images.unsplash.com/photo-1551076805-e1869033e561?auto=format&fit=crop&w=1000&q=80',
+      altText: 'Sterile surgical suite for cataract and microsurgery',
+      displayOrder: 5,
+    },
+    {
+      id: 'gal-6',
+      title: 'Patient Waiting Lounge & Care Corridor',
+      category: 'Patient Areas',
+      imageUrl: 'https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?auto=format&fit=crop&w=1000&q=80',
+      altText: 'Comfortable waiting area for visiting patients and families',
+      displayOrder: 6,
+    },
+  ],
+
+  appointments: [
+    {
+      id: 'apt-sample-1',
+      appointmentId: 'MEH-2026-00042',
+      patientName: 'Kavitha R.',
+      phone: '+91 98450 12345',
+      email: 'kavitha.r@example.com',
+      age: 48,
+      gender: 'Female',
+      isNewPatient: false,
+      department: 'eye',
+      serviceId: 'eye-1',
+      serviceName: 'Cataract Care',
+      date: '2026-10-05',
+      time: '10:00 AM',
+      reason: 'Routine eye checkup and cataract evaluation review.',
+      preferredLanguage: 'Kannada',
+      status: 'Confirmed',
+      staffNotes: 'Confirmed by reception. Patient requested morning slot.',
+      createdAt: '2026-09-28T10:15:00.000Z',
+      updatedAt: '2026-09-28T10:15:00.000Z',
+    },
+    {
+      id: 'apt-sample-2',
+      appointmentId: 'MEH-2026-00043',
+      patientName: 'Suresh Patil',
+      phone: '+91 99012 34567',
+      age: 35,
+      gender: 'Male',
+      isNewPatient: true,
+      department: 'dental',
+      serviceId: 'dental-1',
+      serviceName: 'Comprehensive Dental Care',
+      date: '2026-10-06',
+      time: '05:30 PM',
+      reason: 'Dental pain on upper left molar during chewing.',
+      preferredLanguage: 'Kannada',
+      status: 'Pending',
+      createdAt: '2026-09-29T14:20:00.000Z',
+      updatedAt: '2026-09-29T14:20:00.000Z',
+    },
+  ],
+
+  contactMessages: [
+    {
+      id: 'msg-1',
+      name: 'Ramesh Kumar',
+      phone: '+91 94481 23456',
+      email: 'ramesh.gangavathi@example.com',
+      message: 'Inquiring if OCT scan facility is open this Saturday afternoon.',
+      createdAt: '2026-09-29T11:00:00.000Z',
+      isRead: false,
+    },
+  ],
+  adminPasswordHash: DEFAULT_ADMIN_PASSWORD_HASH,
+};

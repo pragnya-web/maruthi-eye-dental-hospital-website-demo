@@ -1,0 +1,6 @@
+{
+  "name": "Maruthi Eye & Dental Hospital",
+  "description": "Premium appointment booking and healthcare services for Maruthi Eye & Dental Hospital in Gangavathi, Karnataka.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
